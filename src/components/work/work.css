@@ -1,0 +1,124 @@
+.clearfix:before, .clearfix:after { 
+	content: ''; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fff;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure .number {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure .number span {
+	font-weight: 800;
+}
+.hover-text-one figure .number,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+}
+
+/* Эффект при наведении */
+figure.effect-text-two figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: -webkit-linear-gradient(top, rgba(72,76,97,0) 0%, rgba(72,76,97,0.8) 50%);
+	background: linear-gradient(to bottom, rgba(72,76,97,0) 0%, rgba(69,44,50	,0.8) 50%);
+	content: '';
+	opacity: 0;
+	-webkit-transform: translate3d(0,40%,0);
+	transform: translate3d(0,40%,0);
+}
+figure.effect-text-two .number {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	width: 100%;
+	color: #c9492f !important;
+	-webkit-transition: -webkit-transform 0.35s, color 0.35s;
+	transition: transform 0.35s, color 0.35s;
+	-webkit-transform: translate3d(0,-50%,0);
+	transform: translate3d(0,-50%,0);
+}
+figure.effect-text-two figcaption::before,
+figure.effect-text-two .step {
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-text-two .step {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 130px;
+	opacity: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-two img {
+	-o-object-fit:cover;
+	object-fit:cover;
+	transition: 0.3s;
+}
+figure.effect-text-two:hover .number {
+	color: #fff;
+	-webkit-transform: translate3d(0,-50%,0) translate3d(0,-40px,0);
+	transform: translate3d(0,-50%,0) translate3d(0,-140px,0);
+}
+figure.effect-text-two:hover figcaption::before {
+    opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+} 
+figure.effect-text-two:hover .step {
+	opacity: 1;
+	-webkit-transform: translate3d(0,-350px,0);
+	transform: translate3d(0,-350px,0);
+}
+
+

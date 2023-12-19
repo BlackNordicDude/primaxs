@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #30323E;
+}
+
+.shadows {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.5);
+}
+
+.button {
+  background-color: #452C32;
+  border-radius: 6px;
+  padding: 20px;
+  color: #fff;
+  width: 300px;
+}
+
+.active {
+  background-color: #CCC8C5;
+  color: #452C32;
+}
+
+.bg-opacity {
+  background: rgba(48, 50, 63, 0.075);
+}
+
+.hero-bg {
+  background: url(src/assets/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.black-gradient {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%);
+}
